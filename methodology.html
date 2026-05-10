@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Research methodology for shock wave and porous wall studies">
-    <title>Methodology - Shock Waves in Porous Conduits</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Methodology — Shock Waves in Porous Conduits</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* SVG porous model illustrations */
+    .model-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin: 2rem 0; }
+    .model-card { background: var(--white); border: 1px solid var(--rule); border-radius: 3px; padding: 1.5rem; text-align: center; }
+    .model-card h3 { font-size: 0.95rem; margin: 0.8rem 0 0.3rem; }
+    .model-card p { font-size: 0.82rem; margin: 0; color: var(--ink-light); }
+
+    .spec-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    .spec-table tr { border-top: 1px solid var(--rule); }
+    .spec-table tr:first-child { border-top: none; }
+    .spec-table td { padding: 0.7rem 0; }
+    .spec-table td:first-child { color: var(--ink-light); font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; width: 45%; }
+    .spec-table td:last-child { font-weight: 500; color: var(--ink); }
+
+    .instrument-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .instrument {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      padding: 1.4rem;
+    }
+    .instrument h3 { font-size: 0.9rem; margin-bottom: 0.5rem; }
+    .instrument p { font-size: 0.85rem; margin: 0; }
+
+    @media (max-width: 600px) {
+      .model-grid { grid-template-columns: 1fr; }
+      .instrument-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
     <nav class="navbar">

@@ -69,79 +69,200 @@
   </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">Shock Wave Research</div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="methodology.html">Methodology</a></li>
-                <li><a href="results.html">Results</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      Shock Waves in Porous Conduits
+      <span>Technion · Faculty of Mechanical Engineering</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="methodology.html">Methodology</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <canvas class="wave-canvas" id="waveCanvas"></canvas>
+  <div class="hero-inner">
+    <p class="hero-tag fade-up fade-up-1">Shock Wave Dynamics · Fluid Mechanics · Porous Media</p>
+    <h1 class="fade-up fade-up-2">Shock Wave Propagation<br>in a Conduit with a Porous Wall</h1>
+    <p class="hero-sub fade-up fade-up-3">
+      How does the internal geometry of a porous wall govern the transmission, attenuation, and reflection of shock waves? This research characterizes the mechanisms using high-speed schlieren photography and multi-point pressure measurements at the Technion.
+    </p>
+    <div class="fade-up fade-up-4" style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem;">
+      <a href="research.html" class="btn btn-primary">Explore the Research</a>
+      <a href="results.html" class="btn btn-outline">View Results</a>
+    </div>
+    <div class="hero-meta fade-up fade-up-4">
+      <div>
+        <strong>Researcher</strong>
+        <p>Omri Ben Haim</p>
+      </div>
+      <div>
+        <strong>Supervisors</strong>
+        <p>Yoav Gichon, Omri Ram</p>
+      </div>
+      <div>
+        <strong>Institution</strong>
+        <p>Technion — Israel Institute of Technology</p>
+      </div>
+      <div>
+        <strong>Department</strong>
+        <p>Faculty of Mechanical Engineering</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- OVERVIEW -->
+  <section>
+    <div class="intro-grid">
+      <div>
+        <p class="section-label">Overview</p>
+        <h2>The Problem</h2>
+        <p>
+          When a shock wave travels along a conduit fitted with a porous wall, it creates an
+          immediate pressure jump at the wall's front face. A weaker transmitted shock emerges
+          from the rear face and propagates into the cavity behind, while fast mass flow drives
+          strong vortex formation.
+        </p>
+        <p>
+          Over time, the cavity pressure rises until it equalises on both sides of the porous
+          medium. During this transient process, the shock inside the cavity evolves through
+          four distinct stages before both shocks settle into a coupled pseudo-steady propagation.
+        </p>
+        <p>
+          The central question is: <strong>how does the internal geometry of the porous wall —
+          pore shape, orientation, and arrangement — govern this entire process?</strong>
+        </p>
+        <a href="research.html" class="btn btn-outline" style="margin-top:0.5rem;">Read the full research background →</a>
+      </div>
+      <div>
+        <div class="poster-thumb">
+          <img src="img_poster.jpg" alt="Research poster — Shock Wave Propagation in a Conduit with a Porous Wall" />
+          <div class="poster-thumb-caption">
+            <span>Conference Poster — 2026</span>
+            <span>Omri Ben Haim et al., Technion</span>
+          </div>
         </div>
-    </nav>
+      </div>
+    </div>
+  </section>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Shock Waves in Porous Conduits</h1>
-            <p class="subtitle">Investigating the Influence of Porous Wall Geometry on Shock Wave Behavior</p>
-            <a href="research.html" class="cta-button">Learn More</a>
+  <hr class="rule">
+
+  <!-- FOUR STAGES -->
+  <section>
+    <p class="section-label">Key Finding</p>
+    <h2>Four Stages of Shock Evolution</h2>
+    <p>High-speed schlieren imaging reveals a consistent four-stage transient process before pseudo-steady propagation is established.</p>
+
+    <div class="key-findings">
+      <div class="finding">
+        <p class="finding-step">Stage 1</p>
+        <h3>Regular Reflection</h3>
+        <p>The transmitted shock enters the cavity at a shallow angle and reflects regularly off the cavity floor.</p>
+      </div>
+      <div class="finding">
+        <p class="finding-step">Stage 2</p>
+        <h3>Mach Reflection</h3>
+        <p>The reflection angle steepens, the regular reflection can no longer be sustained, and a Mach stem forms and grows.</p>
+      </div>
+      <div class="finding">
+        <p class="finding-step">Stage 3</p>
+        <h3>Wave Convergence</h3>
+        <p>As the Mach stem reaches the porous wall, two shocks travel above and converge — the trailing shock overtakes the leading one.</p>
+      </div>
+      <div class="finding">
+        <p class="finding-step">Stage 4</p>
+        <h3>Pseudo-Steady State</h3>
+        <p>A perpendicular bottom shock and two coupled upper shocks propagate at a constant, locked velocity.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- FIGURES PREVIEW -->
+  <section>
+    <p class="section-label">Experimental Setup</p>
+    <h2>Shock Tube &amp; Schlieren System</h2>
+    <div class="two-col-wide">
+      <div>
+        <p>
+          Experiments are conducted in a 6-metre square-section shock tube fitted with a
+          fast-opening valve and a custom 1.2 m rectangular test section. The test section
+          has clear PMMA windows that allow schlieren optical access, and accommodates
+          interchangeable porous wall samples at adjustable stand-off distances.
+        </p>
+        <p>
+          A high-speed Phantom camera captures up to 20,000 fps synchronized with an
+          Nd:YAG laser producing 240 ns pulses, giving temporally resolved schlieren
+          images of the evolving shock patterns.
+        </p>
+        <a href="methodology.html" class="btn btn-outline" style="margin-top:0.5rem;">Full methodology →</a>
+      </div>
+      <div>
+        <div class="figure">
+          <img src="img_shock_tube.png" alt="Shock tube schematic and schlieren optical setup" />
+          <p class="figure-caption"><strong>Fig. 1</strong> — Schematic of the shock tube (top) and the schlieren optical arrangement with parabolic mirrors, high-speed camera, and LED source (bottom).</p>
         </div>
-    </header>
+      </div>
+    </div>
+  </section>
 
-    <main class="container">
-        <section class="overview">
-            <h2>Research Overview</h2>
-            <p>
-                This research investigates how the internal geometry of porous walls affects the behavior and 
-                propagation of shock waves moving through conduits. Understanding these interactions is crucial 
-                for applications in engineering, combustion, and fluid dynamics.
-            </p>
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>Focus Area</h3>
-                    <p>Porous wall geometry effects on shock wave dynamics</p>
-                </div>
-                <div class="info-card">
-                    <h3>Applications</h3>
-                    <p>Industrial processes, combustion engines, safety systems</p>
-                </div>
-                <div class="info-card">
-                    <h3>Field</h3>
-                    <p>Fluid Dynamics & Engineering</p>
-                </div>
-            </div>
-        </section>
+</main>
 
-        <section class="quick-links">
-            <h2>Explore the Research</h2>
-            <div class="link-grid">
-                <a href="research.html" class="link-card">
-                    <h4>📊 Research Details</h4>
-                    <p>Understand the problem and objectives</p>
-                </a>
-                <a href="methodology.html" class="link-card">
-                    <h4>🔬 Methodology</h4>
-                    <p>Experimental setup and computational methods</p>
-                </a>
-                <a href="results.html" class="link-card">
-                    <h4>📈 Results</h4>
-                    <p>Key findings and analysis</p>
-                </a>
-                <a href="contact.html" class="link-card">
-                    <h4>📧 Get in Touch</h4>
-                    <p>Connect with the researcher</p>
-                </a>
-            </div>
-        </section>
-    </main>
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Omri Ben Haim · Technion — Israel Institute of Technology</span>
+    <span>Faculty of Mechanical Engineering · Turbulent Flow &amp; Multiphase Laboratory</span>
+  </div>
+</footer>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Shock Wave Research. All rights reserved.</p>
-            <p>Technion - Israel Institute of Technology</p>
-        </div>
-    </footer>
+<script>
+  // Subtle animated sine wave in hero background
+  const canvas = document.getElementById('waveCanvas');
+  const ctx = canvas.getContext('2d');
+  let t = 0;
+
+  function resize() {
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.strokeStyle = '#1a3a5c';
+    ctx.lineWidth = 1.5;
+
+    for (let row = 0; row < 5; row++) {
+      const y0 = (canvas.height / 5) * (row + 0.5);
+      const amp = 18 + row * 6;
+      const freq = 0.012 - row * 0.001;
+      const phase = row * 1.2;
+
+      ctx.beginPath;
+      for (let x = 0; x <= canvas.width; x += 2) {
+        const y = y0 + Math.sin(x * freq + t + phase) * amp;
+        x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+    }
+    t += 0.012;
+    requestAnimationFrame(draw);
+  }
+  draw();
+</script>
+
 </body>
 </html>
